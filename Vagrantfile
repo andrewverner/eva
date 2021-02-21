@@ -19,4 +19,6 @@ Vagrant.configure("2") do |config|
 
   config.ssh.insert_key = false
 
+  config.vm.provision :shell, keep_color: true, path: "vagrant/provision.sh"
+
 end

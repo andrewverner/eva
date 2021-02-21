@@ -45,4 +45,11 @@ git reset --hard origin/master
 echoTitle 'Installing NGINX'
 # ---------------------------------------------------------------------------------------------------------------------
 sudo apt-get install -y nginx
+sudo touch /var/log/nginx/eva.error.log
+sudo touch /var/log/nginx/eva.access.log
+sudo cp /var/www/html/vagrant/app.conf /etc/nginx/sites-enabled/app.conf
+sudo service nginx restart
 
+# ---------------------------------------------------------------------------------------------------------------------
+echoTitle 'DONE. Do not forget to add 192.168.100.70 eva.local into hosts file'
+# ---------------------------------------------------------------------------------------------------------------------
